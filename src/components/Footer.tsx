@@ -39,7 +39,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="gap-3 flex flex-col">
+        {/* <div className="gap-3 flex flex-col">
           <h2 className="text-2xl text-primary text-center">
             Znajdź nas na mapie
           </h2>
@@ -54,7 +54,7 @@ export const Footer = () => {
               loading="lazy"
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="flex items-center justify-center border-t p-4 h-16">
         <p>&copy; 2024 Adam Stefański</p>

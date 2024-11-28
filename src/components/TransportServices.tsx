@@ -146,43 +146,38 @@ const transportServices = [
 
 const TransportServices: React.FC = () => {
   return (
-    <div className="py-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-primary mb-8">
-          Nasze Usługi Transportowe
-        </h2>
-        {transportServices.map((category, index) => (
-          <div key={index} className="mb-12">
-            <h3 className="text-3xl font-semibold text-secondary-foreground mb-6">
-              {category.category}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {category.sections.map((section, idx) => (
-                <Card
-                  key={idx}
-                  className="p-6 rounded-lg shadow-md hover:shadow-lg hover:dark:bg-card/90 transition-shadow"
-                >
-                  <CardContent>
-                    <CardTitle className="text-xl font-bold text-primary">
-                      {section.title}
-                    </CardTitle>
-                  </CardContent>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      {section.description}
-                    </p>
-                    <ul className="list-disc list-inside text-secondary-foreground">
-                      {section.services.map((service, serviceIdx) => (
-                        <li key={serviceIdx}>{service}</li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+    <div className="py-10 max-w-7xl mx-auto px-4">
+      {transportServices.map((category, index) => (
+        <div key={index} className="mb-12">
+          <h3 className="text-3xl font-semibold text-secondary-foreground mb-6">
+            {category.category}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {category.sections.map((section, idx) => (
+              <Card
+                key={idx}
+                className="p-6 rounded-lg shadow-md hover:shadow-lg hover:dark:bg-card/90 transition-shadow"
+              >
+                <CardContent>
+                  <CardTitle className="text-xl font-bold text-primary">
+                    {section.title}
+                  </CardTitle>
+                </CardContent>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    {section.description}
+                  </p>
+                  <ul className="list-disc list-inside text-secondary-foreground">
+                    {section.services.map((service, serviceIdx) => (
+                      <li key={serviceIdx}>{service}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
